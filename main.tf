@@ -28,6 +28,9 @@ module "gce" {
     depends_on = [ module.vpc,module.subnetwork ]
 }
 
-
-
-
+module "firewall" {
+    source = "./firewall"
+    name = var.firewall_name
+    network_name = module.vpc.vpc_id 
+  
+}

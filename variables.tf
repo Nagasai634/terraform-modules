@@ -30,3 +30,6 @@ variable "zone" {
 variable "machine_type" {
     type = string
 }
+variable "firewall_name" {
+    type = string
+}
